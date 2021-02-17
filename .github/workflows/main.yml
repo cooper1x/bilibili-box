@@ -1,5 +1,7 @@
 name: Update gist with latest Bilibili videos
 on:
+  watch:
+    types: [started]
   push:
     branches:
       - master
@@ -24,6 +26,6 @@ jobs:
       - name: "Update gist"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: a74258deecd487f992a6a446ec62c05c
-          UID: '596324576'
+          GIST_ID: 3036189c30d14d2d6664c8befffe9f21
+          UID: '2026561407'
         run: deno run --allow-net --allow-env index.ts
